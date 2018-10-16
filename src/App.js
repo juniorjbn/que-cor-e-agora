@@ -61,7 +61,7 @@ class App extends Component {
           <div id="intro">
             <p className="introh3">
               <span className="dottedline_left"/>
-              Que cor é agora? #007
+              Que cor é agora? #008
               <span className="dottedline_right"/>
             </p>
             <p className="introh1" id="agora">{display}</p>
