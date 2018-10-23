@@ -2,7 +2,7 @@
 node('docker-slave') {
     ansiColor('xterm') {
         timestamps {
-            stage('Build Image') {
+            stage('Build Docker Image') {
                 checkout scm
                 sh """
                    make image tag
