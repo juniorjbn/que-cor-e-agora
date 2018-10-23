@@ -18,5 +18,5 @@ tag:
 
 .PHONY: push
 push: tag
-	docker push $(IMAGE)
-	docker push $(LATEST)
+	docker push quay.io/$(IMAGE)
+	docker push quay.io/$(LATEST)
