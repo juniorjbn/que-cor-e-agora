@@ -10,11 +10,11 @@ default: image
 
 .PHONY: image
 image:
-	docker build . -t $(IMAGE)
+	docker build . -t quay.io/$(IMAGE)
 
 .PHONY: tag
 tag:
-	docker tag $(IMAGE) $(LATEST)
+	docker tag quay.io/$(IMAGE) quay.io/$(LATEST)
 
 .PHONY: push
 push: tag
