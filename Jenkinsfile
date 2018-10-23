@@ -12,8 +12,9 @@ node('docker-slave') {
 
             stage('Push Image') {
 
-              withDockerRegistry([credentialsId: 'quay', url: 'https://quay.io']) {
+              withCredentials([usernamePassword(credentialsId: 'quay', passwordVariable: 'rpass', usernameVariable: 'ruser')]) {
                  sh """
+                   docker login -u=${ruser} -p=${rpass} quay.io
                    make push 
                  """
               }
