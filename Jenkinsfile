@@ -14,8 +14,7 @@ node('docker-slave') {
 
               withCredentials([usernamePassword(credentialsId: 'quay', passwordVariable: 'rpass', usernameVariable: 'ruser')]) {
                  sh """
-                   docker login -u=${ruser} -p=${rpass} quay.io
-                   make push 
+                   docker login -u=${ruser} -p=${rpass} quay.io && make push 
                  """
               }
             }
