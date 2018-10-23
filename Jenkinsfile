@@ -12,7 +12,7 @@ node('docker-slave') {
 
             stage('Push Image') {
 
-              withDockerRegistry([credentialsId: 'quay', url: 'https://quay.io']) {
+              withDockerRegistry([credentialsId: 'quay', url: 'quay.io']) {
                  sh """
                    make push 
                  """
